@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:merchant_kyc_app/ui/screens/app_overview_screen/app_overview_screen.dart';
+import 'package:merchant_kyc_app/ui/providers/navigation_provider.dart';
+import 'package:merchant_kyc_app/ui/screens/app_overview/app_overview_screen.dart';
+import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -11,7 +13,12 @@ void main() async {
       supportedLocales: const [Locale('en'), Locale('ru')],
       path: 'assets/translations',
       fallbackLocale: const Locale('en'),
-      child: const MyApp(),
+      child: MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (ctx) => NavigationProvider()),
+        ],
+        child: const MyApp(),
+      ),
     ),
   );
 }
@@ -27,6 +34,7 @@ class MyApp extends StatelessWidget {
       locale: context.locale,
       theme: ThemeData(
         useMaterial3: true,
+        //TODO: provide custom font
         textTheme: const TextTheme(
           displaySmall: TextStyle(
             color: Colors.black,

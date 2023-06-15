@@ -11,5 +11,20 @@
   "signHelp": "Need help signing in?",
   "email": "Email",
   "password": "Password",
-  "home": "Home"
+  "home": "Home",
+  "rates": "Rates",
+  "accounts": "Accounts",
+  "buy": "Buy",
+  "sell": "Sell",
+  "today": "Today",
+  "withdraw": "Withdraw",
+  "deposit": "Deposit",
+  "profile": "Profile",
+  "accountSecurity": "Security of the account",
+  "notification": "Notification",
+  "accountVerification": "Verification of the account",
+  "settings": "Settings",
+  "currencies": "Currencies",
+  "fiat": "Fiat",
+  "crypto": "Crypto"
 }

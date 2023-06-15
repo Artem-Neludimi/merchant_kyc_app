@@ -13,7 +13,6 @@ class CustomButton extends StatelessWidget {
       width: 130,
       child: ElevatedButton(
         onPressed: onPressed,
-        child: child,
         style: ElevatedButton.styleFrom(
           foregroundColor: Colors.white,
           backgroundColor: const Color.fromRGBO(32, 241, 192, 1),
@@ -25,6 +24,7 @@ class CustomButton extends StatelessWidget {
                 ),
           ),
         ),
+        child: child,
       ),
     );
   }

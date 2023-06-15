@@ -1,7 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:merchant_kyc_app/ui/screens/login_screen/login_screen.dart';
+
+import '../login/login_screen.dart';
 
 class AppOverviewScreen extends StatefulWidget {
   const AppOverviewScreen({super.key});
@@ -17,6 +18,10 @@ class _AppOverviewScreenState extends State<AppOverviewScreen> {
 
     return Scaffold(
       body: IntroductionScreen(
+        //TODO: custom progress
+        //TODO: paint lines like in figma
+        //TODO: custom arrow like in figma
+        //TODO: shadow under 3 picture
         showNextButton: true,
         next: const Icon(Icons.arrow_forward),
         done: const Icon(Icons.arrow_forward),
@@ -42,7 +47,6 @@ class _AppOverviewScreenState extends State<AppOverviewScreen> {
     BuildContext context,
   ) {
     final theme = Theme.of(context);
-
     return PageViewModel(
       title: '',
       bodyWidget: Column(
